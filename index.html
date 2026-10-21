@@ -1,0 +1,912 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Itinerary liburan Bali 5 hari 4 malam, panduan wisata Ubud dan Uluwatu.">
+  <title>Explore Bali | Itinerary 5 Hari 4 Malam</title>
+
+  <style>
+    :root {
+      --green: #234e3d;
+      --gold: #d9ad65;
+      --cream: #f8f5ed;
+      --white: #ffffff;
+      --text: #29342e;
+      --muted: #6c776f;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      background: var(--green);
+      color: white;
+      padding: 20px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      min-height: 450px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 65px 20px;
+      color: white;
+      background:
+        linear-gradient(rgba(15, 35, 27, .62),
+                        rgba(15, 35, 27, .72)),
+        url("https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(36px, 6vw, 65px);
+      line-height: 1.15;
+      margin: 18px 0;
+    }
+
+    .hero p {
+      max-width: 620px;
+      margin: 0 auto 25px;
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      background: var(--gold);
+      color: #24382d;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 1150px;
+      margin: auto;
+      padding: 45px 20px;
+    }
+
+    section {
+      margin-bottom: 55px;
+      scroll-margin-top: 20px;
+    }
+
+    .section-title {
+      color: var(--green);
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    .overview {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin-top: -75px;
+      position: relative;
+      margin-bottom: 55px;
+    }
+
+    .overview-card {
+      background: white;
+      padding: 22px 16px;
+      text-align: center;
+      border-radius: 9px;
+      box-shadow: 0 5px 22px #00000012;
+    }
+
+    .overview-card .number {
+      color: var(--green);
+      font-size: 27px;
+      font-weight: bold;
+    }
+
+    .overview-card p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .day {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 20px #0000000a;
+    }
+
+    .day-heading {
+      background: var(--green);
+      color: white;
+      padding: 22px 25px;
+    }
+
+    .day-heading h3 {
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+
+    .day-heading p {
+      color: #e0e8e1;
+      font-size: 14px;
+    }
+
+    .day-body {
+      padding: 22px 25px;
+    }
+
+    .route {
+      background: #f0f3ed;
+      border-left: 4px solid var(--gold);
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 620px;
+      font-size: 14px;
+    }
+
+    th {
+      background: #edf1eb;
+      color: var(--green);
+      text-align: left;
+    }
+
+    th, td {
+      padding: 13px 12px;
+      border-bottom: 1px solid #e6e9e3;
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .time {
+      white-space: nowrap;
+      font-weight: bold;
+      color: var(--green);
+    }
+
+    .tips {
+      background: #f0eadb;
+      padding: 17px 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .tips strong {
+      color: var(--green);
+    }
+
+    .budget-table {
+      min-width: 0;
+    }
+
+    .budget-table td:last-child,
+    .budget-table th:last-child {
+      text-align: right;
+    }
+
+    .note {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 12px;
+    }
+
+    .checklist {
+      list-style: none;
+    }
+
+    .checklist li {
+      padding: 10px 0;
+      border-bottom: 1px solid #e4e7df;
+    }
+
+    .checklist li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    footer {
+      background: var(--green);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: #dce5dd;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        padding: 18px 5%;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      .hero {
+        min-height: 390px;
+      }
+
+      .overview {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: -40px;
+      }
+
+      .section-title {
+        font-size: 25px;
+      }
+
+      .day-body {
+        padding: 16px;
+      }
+    }
+
+    @media print {
+      header nav, .button {
+        display: none;
+      }
+
+      body {
+        background: white;
+      }
+
+      .overview {
+        margin-top: 20px;
+      }
+
+      .day {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">EXPLORE <span>BALI</span></div>
+    <nav>
+      <a href="#tentang">Tentang</a>
+      <a href="#itinerary">Itinerary</a>
+      <a href="#anggaran">Anggaran</a>
+      <a href="#tips">Tips</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="tentang">
+    <div class="hero-content">
+      <div class="eyebrow">Your Island Escape</div>
+      <h1>Discover the Beauty of Bali</h1>
+      <p>
+        Lima hari empat malam menjelajahi sawah hijau Ubud,
+        budaya Bali, pantai eksotis, dan matahari terbenam
+        di tebing Uluwatu.
+      </p>
+      <a class="button" href="#itinerary">Jelajahi Itinerary</a>
+    </div>
+  </section>
+
+  <main>
+
+    <div class="overview">
+      <div class="overview-card">
+        <div class="number">5 Hari</div>
+        <p>Durasi perjalanan</p>
+      </div>
+      <div class="overview-card">
+        <div class="number">4 Malam</div>
+        <p>Akomodasi</p>
+      </div>
+      <div class="overview-card">
+        <div class="number">2 Area</div>
+        <p>Ubud dan Uluwatu</p>
+      </div>
+      <div class="overview-card">
+        <div class="number">2 + 2</div>
+        <p>Malam di tiap area</p>
+      </div>
+    </div>
+
+    <section>
+      <h2 class="section-title">Gambaran Perjalanan</h2>
+      <p class="section-intro">
+        Konsep perjalanan: budaya dan alam, dilengkapi wisata pantai.
+        Asumsi anggaran menengah, bersama pasangan, dengan tempo santai.
+      </p>
+
+      <div class="route">
+        <strong>Rute utama:</strong><br>
+        Bandara Ngurah Rai → Ubud (2 malam) →
+        Uluwatu (2 malam) → Bandara Ngurah Rai.
+        Waktu perjalanan dapat berubah karena lalu lintas.
+      </div>
+
+      <p>
+        <strong>Hari 1–2:</strong> Fokus di Ubud untuk sawah,
+        pura, hutan tropis, kuliner, dan budaya lokal.
+      </p>
+      <p>
+        <strong>Hari 3–4:</strong> Berpindah ke Uluwatu,
+        menikmati pantai, tebing, pura, dan pertunjukan Kecak.
+      </p>
+      <p>
+        <strong>Hari 5:</strong> Sarapan, bersantai, lalu menuju bandara.
+      </p>
+    </section>
+
+    <section id="itinerary">
+      <h2 class="section-title">Itinerary Harian</h2>
+      <p class="section-intro">
+        Jam berikut merupakan perkiraan. Sesuaikan dengan waktu
+        kedatangan, keberangkatan, cuaca, dan kondisi jalan.
+      </p>
+
+      <!-- HARI 1 -->
+      <article class="day">
+        <div class="day-heading">
+          <h3>Hari 1 — Kedatangan & Eksplorasi Ubud</h3>
+          <p>Tema: Adaptasi, suasana kota, dan budaya lokal</p>
+        </div>
+
+        <div class="day-body">
+          <div class="route">
+            <strong>Rute:</strong> Bandara → hotel Ubud →
+            pusat Ubud. Menginap malam pertama di Ubud.
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Waktu</th>
+                  <th>Aktivitas</th>
+                  <th>Durasi</th>
+                  <th>Catatan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="time">10.00–12.00</td>
+                  <td>Perjalanan dari bandara menuju Ubud</td>
+                  <td>1,5–2,5 jam</td>
+                  <td>Sesuaikan dengan jam kedatangan dan lalu lintas.</td>
+                </tr>
+                <tr>
+                  <td class="time">12.00–13.30</td>
+                  <td>Makan siang dan check-in hotel</td>
+                  <td>1,5 jam</td>
+                  <td>Pilih penginapan dekat pusat Ubud.</td>
+                </tr>
+                <tr>
+                  <td class="time">14.00–15.30</td>
+                  <td>Jalan-jalan di Ubud Art Market</td>
+                  <td>1–1,5 jam</td>
+                  <td>Belanja kerajinan dan suvenir.</td>
+                </tr>
+                <tr>
+                  <td class="time">15.30–16.30</td>
+                  <td>Istana Ubud dan area sekitarnya</td>
+                  <td>1 jam</td>
+                  <td>Periksa akses dan jadwal pertunjukan.</td>
+                </tr>
+                <tr>
+                  <td class="time">16.45–18.00</td>
+                  <td>Jalan santai di pusat kota</td>
+                  <td>1–1,25 jam</td>
+                  <td>Waktu yang fleksibel untuk beristirahat.</td>
+                </tr>
+                <tr>
+                  <td class="time">19.00–20.30</td>
+                  <td>Makan malam khas Bali</td>
+                  <td>1,5 jam</td>
+                  <td>Coba nasi campur Bali atau hidangan lokal.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="tips">
+            <strong>Tips hari pertama:</strong>
+            Jangan membuat jadwal terlalu padat setelah penerbangan.
+            Jika pesawat tiba sore, cukup check-in dan makan malam.
+          </div>
+        </div>
+      </article>
+
+      <!-- HARI 2 -->
+      <article class="day">
+        <div class="day-heading">
+          <h3>Hari 2 — Sawah, Alam & Budaya Ubud</h3>
+          <p>Tema: Alam tropis dan pengalaman budaya Bali</p>
+        </div>
+
+        <div class="day-body">
+          <div class="route">
+            <strong>Rute:</strong> Ubud → Tegallalang →
+            Tirta Empul → pusat Ubud. Menginap malam kedua di Ubud.
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Waktu</th>
+                  <th>Aktivitas</th>
+                  <th>Durasi</th>
+                  <th>Catatan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="time">07.00–08.30</td>
+                  <td>Sarapan dan perjalanan menuju Tegallalang</td>
+                  <td>1,5 jam</td>
+                  <td>Berangkat pagi untuk menghindari keramaian.</td>
+                </tr>
+                <tr>
+                  <td class="time">08.30–10.00</td>
+                  <td>Tegallalang Rice Terrace</td>
+                  <td>1,5 jam</td>
+                  <td>Menikmati pemandangan sawah bertingkat.</td>
+                </tr>
+                <tr>
+                  <td class="time">10.00–10.45</td>
+                  <td>Perjalanan menuju Tirta Empul</td>
+                  <td>30–45 menit</td>
+                  <td>Waktu bergantung titik keberangkatan.</td>
+                </tr>
+                <tr>
+                  <td class="time">10.45–12.15</td>
+                  <td>Pura Tirta Empul</td>
+                  <td>1–1,5 jam</td>
+                  <td>Hormati aturan pura dan pakaian sopan.</td>
+                </tr>
+                <tr>
+                  <td class="time">12.15–13.30</td>
+                  <td>Makan siang di sekitar Tampaksiring</td>
+                  <td>1–1,25 jam</td>
+                  <td>Pilih warung lokal atau restoran dengan pemandangan.</td>
+                </tr>
+                <tr>
+                  <td class="time">13.30–14.30</td>
+                  <td>Kembali ke pusat Ubud</td>
+                  <td>45–60 menit</td>
+                  <td>Hindari menambahkan banyak pemberhentian.</td>
+                </tr>
+                <tr>
+                  <td class="time">15.00–16.30</td>
+                  <td>Monkey Forest Ubud</td>
+                  <td>1–1,5 jam</td>
+                  <td>Jaga jarak dari monyet dan simpan barang kecil.</td>
+                </tr>
+                <tr>
+                  <td class="time">17.00–18.00</td>
+                  <td>Kafe atau waktu istirahat</td>
+                  <td>1 jam</td>
+                  <td>Waktu bebas untuk menikmati suasana Ubud.</td>
+                </tr>
+                <tr>
+                  <td class="time">19.00–20.30</td>
+                  <td>Makan malam dan kembali ke hotel</td>
+                  <td>1,5 jam</td>
+                  <td>Istirahat sebelum pindah ke Uluwatu.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="tips">
+            <strong>Tips hari kedua:</strong>
+            Bawa air minum, tabir surya, dan alas kaki nyaman.
+            Kunjungi air terjun sebagai pengganti Monkey Forest
+            jika lebih menyukai wisata alam.
+          </div>
+        </div>
+      </article>
+
+      <!-- HARI 3 -->
+      <article class="day">
+        <div class="day-heading">
+          <h3>Hari 3 — Pindah ke Uluwatu & Sunset Kecak</h3>
+          <p>Tema: Perjalanan ke selatan dan pemandangan tebing</p>
+        </div>
+
+        <div class="day-body">
+          <div class="route">
+            <strong>Rute:</strong> Hotel Ubud → hotel Uluwatu →
+            Pantai Padang Padang → Pura Uluwatu.
+            Menginap malam ketiga di Uluwatu.
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Waktu</th>
+                  <th>Aktivitas</th>
+                  <th>Durasi</th>
+                  <th>Catatan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="time">07.00–08.00</td>
+                  <td>Sarapan dan check-out</td>
+                  <td>1 jam</td>
+                  <td>Siapkan barang untuk perjalanan.</td>
+                </tr>
+                <tr>
+                  <td class="time">08.00–10.30</td>
+                  <td>Transfer Ubud menuju Uluwatu</td>
+                  <td>2–2,5 jam</td>
+                  <td>Berangkat lebih pagi untuk mengurangi risiko macet.</td>
+                </tr>
+                <tr>
+                  <td class="time">10.30–12.00</td>
+                  <td>Check-in atau titip koper</td>
+                  <td>1–1,5 jam</td>
+                  <td>Check-in awal bergantung kebijakan hotel.</td>
+                </tr>
+                <tr>
+                  <td class="time">12.00–13.00</td>
+                  <td>Makan siang di Uluwatu</td>
+                  <td>1 jam</td>
+                  <td>Pilih restoran di sekitar Pecatu.</td>
+                </tr>
+                <tr>
+                  <td class="time">13.30–15.00</td>
+                  <td>Pantai Padang Padang</td>
+                  <td>1–1,5 jam</td>
+                  <td>Perhatikan ombak, tangga, dan kondisi pasang.</td>
+                </tr>
+                <tr>
+                  <td class="time">15.00–16.00</td>
+                  <td>Perjalanan menuju Pura Uluwatu</td>
+                  <td>30–60 menit</td>
+                  <td>Berangkat lebih awal saat lalu lintas padat.</td>
+                </tr>
+                <tr>
+                  <td class="time">16.00–17.30</td>
+                  <td>Menjelajahi Pura Uluwatu</td>
+                  <td>1–1,5 jam</td>
+                  <td>Datang lebih awal untuk menikmati tebing.</td>
+                </tr>
+                <tr>
+                  <td class="time">18.00–19.00</td>
+                  <td>Pertunjukan Tari Kecak</td>
+                  <td>Sekitar 1 jam</td>
+                  <td>Jadwal dan tiket harus dikonfirmasi sebelumnya.</td>
+                </tr>
+                <tr>
+                  <td class="time">19.30–21.00</td>
+                  <td>Makan malam dan kembali ke hotel</td>
+                  <td>1,5 jam</td>
+                  <td>Pilih restoran dekat penginapan.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="tips">
+            <strong>Tips hari ketiga:</strong>
+            Pesan tiket Kecak terlebih dahulu jika tersedia.
+            Jika perjalanan dari Ubud terlambat, utamakan pura
+            dan pertunjukan, lalu jadwalkan pantai pada hari keempat.
+          </div>
+        </div>
+      </article>
+
+      <!-- HARI 4 -->
+      <article class="day">
+        <div class="day-heading">
+          <h3>Hari 4 — Pantai Eksotis & Santai di Uluwatu</h3>
+          <p>Tema: Pantai, kuliner, dan waktu romantis</p>
+        </div>
+
+        <div class="day-body">
+          <div class="route">
+            <strong>Rute:</strong> Hotel Uluwatu → Bingin atau Thomas Beach →
+            restoran atau beach club → hotel. Menginap malam keempat di Uluwatu.
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Waktu</th>
+                  <th>Aktivitas</th>
+                  <th>Durasi</th>
+                  <th>Catatan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="time">07.30–08.30</td>
+                  <td>Sarapan santai di hotel atau kafe</td>
+                  <td>1 jam</td>
+                  <td>Mulai hari tanpa terburu-buru.</td>
+                </tr>
+                <tr>
+                  <td class="time">09.00–11.00</td>
+                  <td>Bingin Beach atau Thomas Beach</td>
+                  <td>2 jam</td>
+                  <td>Pilih satu pantai untuk menghemat waktu.</td>
+                </tr>
+                <tr>
+                  <td class="time">11.30–13.00</td>
+                  <td>Makan siang di sekitar Pecatu</td>
+                  <td>1,5 jam</td>
+                  <td>Banyak pilihan kafe dan restoran.</td>
+                </tr>
+                <tr>
+                  <td class="time">13.00–15.30</td>
+                  <td>Waktu bebas di hotel atau beach club</td>
+                  <td>2,5 jam</td>
+                  <td>Beach club dapat memerlukan reservasi atau minimum spend.</td>
+                </tr>
+                <tr>
+                  <td class="time">16.00–17.30</td>
+                  <td>Menikmati matahari terbenam</td>
+                  <td>1,5 jam</td>
+                  <td>Pilih tempat sesuai cuaca dan waktu sunset.</td>
+                </tr>
+                <tr>
+                  <td class="time">18.30–20.30</td>
+                  <td>Makan malam romantis</td>
+                  <td>2 jam</td>
+                  <td>Reservasi meja jika ingin pemandangan laut.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="tips">
+            <strong>Tips hari keempat:</strong>
+            Jangan memaksakan banyak pantai dalam sehari.
+            Sebagian pantai memiliki tangga curam dan arus kuat.
+            Pilih lokasi berenang berdasarkan kondisi laut setempat.
+          </div>
+        </div>
+      </article>
+
+      <!-- HARI 5 -->
+      <article class="day">
+        <div class="day-heading">
+          <h3>Hari 5 — Sarapan & Kepulangan</h3>
+          <p>Tema: Penutup perjalanan yang santai</p>
+        </div>
+
+        <div class="day-body">
+          <div class="route">
+            <strong>Rute:</strong> Hotel Uluwatu → Bandara Ngurah Rai.
+            Tidak ada perpindahan hotel tambahan.
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Waktu</th>
+                  <th>Aktivitas</th>
+                  <th>Durasi</th>
+                  <th>Catatan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="time">07.30–09.00</td>
+                  <td>Sarapan dan menikmati suasana hotel</td>
+                  <td>1,5 jam</td>
+                  <td>Jika penerbangan siang atau sore.</td>
+                </tr>
+                <tr>
+                  <td class="time">09.00–10.00</td>
+                  <td>Check-out dan persiapan koper</td>
+                  <td>1 jam</td>
+                  <td>Periksa barang pribadi.</td>
+                </tr>
+                <tr>
+                  <td class="time">10.00–11.30</td>
+                  <td>Perjalanan menuju bandara</td>
+                  <td>45–90 menit atau lebih</td>
+                  <td>Tambahkan cadangan waktu untuk kemacetan.</td>
+                </tr>
+                <tr>
+                  <td class="time">Setelah tiba</td>
+                  <td>Check-in penerbangan dan kepulangan</td>
+                  <td>Sesuai jadwal</td>
+                  <td>Ikuti rekomendasi waktu tiba dari maskapai.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="tips">
+            <strong>Penting:</strong>
+            Jika penerbangan pagi, berangkat langsung dari hotel
+            sesuai jadwal. Jangan memaksakan wisata tambahan
+            pada hari kepulangan.
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="anggaran">
+      <h2 class="section-title">Estimasi Anggaran</h2>
+      <p class="section-intro">
+        Perkiraan untuk dua orang dengan gaya perjalanan menengah,
+        belum termasuk tiket pesawat pulang-pergi. Harga aktual
+        bergantung musim, pilihan hotel, dan aktivitas.
+      </p>
+
+      <div class="table-wrap">
+        <table class="budget-table">
+          <thead>
+            <tr>
+              <th>Kebutuhan</th>
+              <th>Estimasi untuk 2 orang</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hotel 4 malam</td>
+              <td>Rp2.000.000–4.000.000</td>
+            </tr>
+            <tr>
+              <td>Makan dan minum</td>
+              <td>Rp1.000.000–1.800.000</td>
+            </tr>
+            <tr>
+              <td>Transportasi dan transfer</td>
+              <td>Rp1.200.000–2.000.000</td>
+            </tr>
+            <tr>
+              <td>Tiket wisata dan aktivitas</td>
+              <td>Rp500.000–1.200.000</td>
+            </tr>
+            <tr>
+              <td>Cadangan dan biaya lain</td>
+              <td>Rp500.000–1.000.000</td>
+            </tr>
+            <tr>
+              <td><strong>Total estimasi</strong></td>
+              <td><strong>Rp5.200.000–10.000.000</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="note">
+        Angka ini merupakan estimasi perencanaan, bukan penawaran harga.
+        Belum termasuk tiket pesawat, belanja pribadi, spa, dan
+        minimum spend beach club. Periksa tarif terkini sebelum memesan.
+      </p>
+    </section>
+
+    <section id="tips">
+      <h2 class="section-title">Tips Perjalanan Profesional</h2>
+      <p class="section-intro">
+        Persiapan sederhana agar liburan lebih efisien dan nyaman.
+      </p>
+
+      <ul class="checklist">
+        <li>Pesan dua malam di Ubud dan dua malam di Uluwatu.</li>
+        <li>Gunakan pengemudi lokal untuk perjalanan antarkawasan.</li>
+        <li>Mulai wisata alam pada pagi hari untuk mengurangi keramaian.</li>
+        <li>Konfirmasi jam buka, tiket, dan jadwal Tari Kecak sebelum berangkat.</li>
+        <li>Gunakan tabir surya, topi, air minum, dan alas kaki yang nyaman.</li>
+        <li>Hormati aturan berpakaian dan tata krama di tempat suci.</li>
+        <li>Simpan barang berharga saat mengunjungi Monkey Forest.</li>
+        <li>Periksa prakiraan cuaca dan kondisi laut sebelum aktivitas pantai.</li>
+        <li>Sisihkan waktu cadangan untuk lalu lintas dan perubahan cuaca.</li>
+        <li>Konfirmasi waktu transfer bandara berdasarkan jadwal penerbangan.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="section-title">Penutup</h2>
+      <p>
+        Itinerary ini dirancang untuk menyeimbangkan budaya,
+        alam, kuliner, dan pantai dalam lima hari empat malam.
+        Dengan menginap dua malam di Ubud dan dua malam di Uluwatu,
+        perjalanan menjadi lebih terarah tanpa terlalu sering
+        berpindah penginapan.
+      </p>
+      <p style="margin-top: 12px;">
+        Selamat menikmati Bali, pulau dengan keindahan alam,
+        kekayaan tradisi, dan keramahan masyarakatnya.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="logo">EXPLORE <span>BALI</span></div>
+    <p>Discover nature, embrace culture, enjoy every moment.</p>
+    <p>© 2026 Explore Bali Travel Guide</p>
+  </footer>
+
+</body>
+</html>
